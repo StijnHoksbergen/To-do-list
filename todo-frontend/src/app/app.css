@@ -1,0 +1,43 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  padding: 0 20px;
+}
+
+.formulier {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.formulier input,
+.formulier textarea {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 4px;
+}
+
+.formulier input[type="date"] {
+  width: auto;
+}
+
+.todo-item {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.todo-item p {
+  margin: 6px 0;
+}
+
+.deadline {
+  float: right;
+  color: gray;
+  font-size: 13px;
+}
+
+.verwijder {
+  color: red;
+}

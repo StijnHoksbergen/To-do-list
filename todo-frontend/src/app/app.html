@@ -1,0 +1,34 @@
+<div style="max-width: 600px; margin: 40px auto; font-family: Arial, sans-serif; padding: 0 20px;">
+<div class="container">
+  <h1>To-Do list</h1>
+
+  <div class="formulier">
+    <h3>Deadlines/Taak toevoegen</h3>
+    <div>
+      <label>Naam:</label><br>
+      <input type="text" [(ngModel)]="nieuweTodo.naam">
+    </div>
+    <div>
+      <label>Beschrijving:</label><br>
+      <textarea [(ngModel)]="nieuweTodo.beschrijving"></textarea>
+    </div>
+    <div>
+      <label>Deadline:</label><br>
+      <input type="date" [(ngModel)]="nieuweTodo.deadline">
+    </div>
+    <button (click)="voegToe()">Toevoegen</button>
+  </div>
+
+  @for (todo of todos; track todo.id) {
+    <div class="todo-item">
+      <strong>{{ todo.naam }}</strong>
+      <span class="deadline">Deadline: {{ todo.deadline }}</span>
+      <p>{{ todo.beschrijving }}</p>
+      <button class="verwijder" (click)="verwijder(todo.id)">Verwijderen</button>
+    </div>
+  }
+
+  @if (todos.length === 0) {
+    <p>Geen to-do's</p>
+  }
+</div>
